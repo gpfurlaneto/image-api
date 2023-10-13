@@ -8,3 +8,7 @@ export function create(user: any){
   const newUser = new User(user);
   return newUser.save();
 }
+
+export function listAll(){
+  return User.find({}).exec();
+}
